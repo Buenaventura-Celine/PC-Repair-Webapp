@@ -17,11 +17,11 @@ router.post('/send', function(req, res, next){
   });
 
   var mailOptions = {
-    from: '"Celine Joie ? "<buenaventuraceline277@gmail.com>',
-    to: 'cielimne@gmail.com',
-    subject: 'Hello from PCRepair',
-    text: 'You have a submission from... Name: '+req.body.name+' Email: '+req.body.email+' Message: '+req.body.message+'',
-    html: '<p>You have a submission from...</p> <ul><li>Name: '+req.body.name+'</li> <li>Email: '+req.body.email+'</li> <li>Message: '+req.body.message+'</li></ul>',
+    from: 'Your Baboo :)',
+    to: '',
+    subject: 'Dont forget to drink water',
+    text: 'This email is auto-generated... Name: '+req.body.name+' Email: '+req.body.email+' Message: '+req.body.message+'',
+    html: '<p>This email is auto-generated. Im just reminding you to drink water...</p> <ul><li>Name: '+req.body.name+'</li> <li>Email: '+req.body.email+'</li> <li>Message: '+req.body.message+'</li></ul>',
   }
 
   transporter.sendMail(mailOptions, function(error, info){

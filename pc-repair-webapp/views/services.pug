@@ -3,10 +3,16 @@ extends layout
 block content 
     .container 
         h1 Services
+        br
+       
+
 
         each service , i in services
-            .well 
-                h3 #{service.name}
-                p #{service.description}
-                p 
-                    | Price Range: #{service.price_range}
+            .card(style='width: 77rem;')
+                .card-body
+                    h5.card-title #{service.name}
+                    h6.card-subtitle.mb-2.text-muted #{service.description}
+                    p.card-text
+                        | Price Range: #{service.price_range}
+            br
+                    
